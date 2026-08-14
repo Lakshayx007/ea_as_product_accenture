@@ -9,6 +9,17 @@
   --color-muted: var(--mut);
   --color-border: var(--bord);
   --font-sans: 'Inter', system-ui, sans-serif;
+  --color-surface-50: var(--surface-50);
+  --color-surface-100: var(--surface-100);
+  --color-surface-200: var(--surface-200);
+  --color-surface-300: var(--surface-300);
+  --color-surface-400: var(--surface-400);
+  --color-surface-500: var(--surface-500);
+  --color-surface-600: var(--surface-600);
+  --color-surface-700: var(--surface-700);
+  --color-surface-800: var(--surface-800);
+  --color-surface-900: var(--surface-900);
+  --color-primary-light: var(--primary-light);
 }
 
 :root {
@@ -18,6 +29,17 @@
   --acc: #6366F1;
   --mut: #64748B;
   --bord: #E2E8F0;
+  --surface-50: #fafafa;
+  --surface-100: #f4f4f5;
+  --surface-200: #e4e4e7;
+  --surface-300: #d4d4d8;
+  --surface-400: #a1a1aa;
+  --surface-500: #71717a;
+  --surface-600: #52525b;
+  --surface-700: #3f3f46;
+  --surface-800: #27272a;
+  --surface-900: #18181b;
+  --primary-light: #6366f1;
 }
 
 .dark {
@@ -27,6 +49,17 @@
   --acc: #dd6b66;
   --mut: #759aa0;
   --bord: #444444;
+  --surface-50: #fafafa;
+  --surface-100: #f4f4f5;
+  --surface-200: #e4e4e7;
+  --surface-300: #d4d4d8;
+  --surface-400: #a1a1aa;
+  --surface-500: #71717a;
+  --surface-600: #52525b;
+  --surface-700: #3f3f46;
+  --surface-800: #27272a;
+  --surface-900: #18181b;
+  --primary-light: #a5b4fc;
 }
 
 @layer base {

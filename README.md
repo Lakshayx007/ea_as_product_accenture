@@ -1,57 +1,49 @@
-# 🧬 Onco-Sight: Cancer-Wise Pipeline Intelligence
+# Enterprise Architecture as a Product
 
-> A powerful, full-stack clinical trial intelligence platform designed to deliver deep, actionable insights into the global oncology pipeline.
+> A modern, data-driven Enterprise Architecture (EA) platform designed to provide actionable insights for CIOs, CFOs, Programme Managers, and Security Officers.
 
 **Built by Lakshay Malik.**
 
 ## 🚀 Overview
 
-Onco-Sight is an advanced data-visualization dashboard that ingests, processes, and visualizes over 120,000+ clinical trials across 75 distinct cancer indications. By utilizing a highly optimized, cloud-native PostgreSQL architecture, the platform enables researchers, analysts, and stakeholders to dynamically filter and explore complex clinical trial landscapes in real-time.
+Enterprise Architecture as a Product is a full-stack intelligence dashboard that centralizes application, project, and financial data into a single pane of glass. By treating Enterprise Architecture as a dynamic data product rather than static documentation, this platform enables leaders to make real-time decisions on IT investments, compliance, and technology lifecycle management.
 
 ## ✨ Key Features
 
-- **Interactive Visualizations:** Deep-dive into trial statuses, phases, and sponsor distributions using interactive heatmaps, funnel charts, and bubble plots.
-- **Dynamic Filtering Engine:** Instantly filter over 123,000 trial records by Phase, Study Type, Status, Sponsor Class, and Lines of Therapy.
-- **Cloud-Native Database:** Powered by Supabase (PostgreSQL), ensuring rapid query execution with minimal memory footprint on the server.
-- **Biomarker & Drug Intelligence:** Discover top co-occurring biomarkers and combination drug therapies currently leading the clinical development pipelines.
-- **Premium UI/UX:** Built with React, Vite, and Tailwind CSS, featuring an elegant, responsive design with specialized dark-mode interfaces.
+- **Role-Based Workspaces:** Dedicated views tailored for CIOs, CFOs, EA Managers, Programme Managers, and Security Officers, surfacing the exact metrics they care about most.
+- **Interactive Visualizations:** Deep-dive into IT spend, application lifecycle status, project pipelines, and technology risk using ECharts (Heatmaps, Funnel charts, Bubble plots).
+- **Dynamic AI Assistant:** Built-in Groq-powered AI chatbot that leverages the live canonical EA data to answer complex architectural and financial queries instantly.
+- **Live Industry News:** Integrated RSS feed to keep track of the latest trends in Enterprise Architecture, TOGAF, and IT Strategy.
+- **Premium UI/UX:** Built with React, Vite, and Tailwind CSS, featuring an elegant, responsive design with smooth animations and dynamic dark/light modes.
 
 ## 🛠️ Technology Stack
 
 **Frontend:**
 - React 18 (Vite)
 - Tailwind CSS
-- Recharts (Data Visualization)
+- Apache ECharts (Data Visualization)
+- Framer Motion (Animations)
 - React Router
 
 **Backend:**
-- Python (FastAPI)
-- SQLAlchemy & Psycopg2
-- Uvicorn
-
-**Database:**
-- PostgreSQL (Hosted on Supabase)
-
-## 📦 Deployment Architecture
-
-The platform is designed to be easily deployed on modern cloud infrastructure:
-- **Frontend:** Optimized for **Vercel** deployment (Zero-config Vite build).
-- **Backend:** Configured for **Render** deployment (FastAPI).
-- **Database:** **Supabase** PostgreSQL instance handling massive dataset indexing.
+- Node.js & Express
+- Groq SDK (LLM Integration)
+- rss-parser (Live News Feed)
 
 ## ⚙️ Getting Started (Local Development)
 
 ### Prerequisites
 - Node.js (v18+)
-- Python 3.10+
+- A Groq API Key
 
 ### 1. Start the Backend
-Navigate to the `backend/` directory, install dependencies, and launch the FastAPI server:
+Navigate to the `backend/` directory, install dependencies, and launch the Express server:
 ```bash
 cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8001
+npm install
+node server.js
 ```
+*Note: Make sure to create a `.env` file in the backend directory containing your `GROQ_API_KEY`.*
 
 ### 2. Start the Frontend
 Navigate to the `frontend/` directory, install dependencies, and run the Vite development server:
