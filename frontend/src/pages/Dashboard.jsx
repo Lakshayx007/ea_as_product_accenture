@@ -741,7 +741,7 @@ export default function Dashboard() {
                       {loadingAi ? (
                         <div className="flex items-center gap-3 text-accent"><div className="w-5 h-5 rounded-full border-2 border-accent border-t-transparent animate-spin" /> Fetching real-time insights from Groq...</div>
                       ) : (
-                        <div dangerouslySetInnerHTML={{ __html: aiInsightText.replace(/\n/g, '<br/>') }} />
+                        <div dangerouslySetInnerHTML={{ __html: (aiInsightText || "Unable to load AI insights. Please check your API key or try again.").replace(/\n/g, '<br/>') }} />
                       )}
                     </div>
                   </div>
