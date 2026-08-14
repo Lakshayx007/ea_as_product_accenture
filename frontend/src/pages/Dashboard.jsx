@@ -427,7 +427,7 @@ export default function Dashboard() {
 
   // Fetch EA Data from backend
   useEffect(() => {
-    fetch('http://localhost:8000/api/ea-data')
+    fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/ea-data`)
       .then(res => res.json())
       .then(data => {
         setDb(data);
@@ -445,7 +445,7 @@ export default function Dashboard() {
   useEffect(() => {
     if (activeTab === 'ai' && !aiInsightText && db) {
       setLoadingAi(true);
-      fetch('http://localhost:8000/api/chat', {
+      fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
