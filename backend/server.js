@@ -79,8 +79,7 @@ Keep your responses concise, professional, and data-driven. Do NOT use markdown 
         { role: 'system', content: systemPrompt },
         ...messages
       ],
-      model: 'llama-3.3-70b-versatile',
-      temperature: 0.5,
+      model: 'openai/gpt-oss-20b',
       max_tokens: 500,
     });
 
