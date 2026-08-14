@@ -562,11 +562,11 @@ export default function Dashboard() {
   </button>
 </div><ReactECharts option={charts.appStatusPie} style={{ height: '300px' }} /><Insight text={`${roleData.activeApps} apps are Active, ${roleData.eolApps} running End-of-Life technology requiring immediate migration.`} /></div>
                         <div className="bg-surface border border-border rounded-2xl p-5 shadow-sm"><div className="flex justify-between items-start mb-4">
-  <h3 className="text-sm font-bold flex items-center gap-2 mb-0"><Network className="w-4 h-4 text-accent" />Application Landscape Map</h3>
-  <button onClick={() => window.dispatchEvent(new CustomEvent('custom-ask-ai', { detail: `Please explain the Application Landscape Map data and its implications for my role.` }))} className="flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider text-accent bg-accent/10 px-2 py-1 rounded-md hover:bg-accent hover:text-white transition-colors shrink-0">
+  <h3 className="text-sm font-bold flex items-center gap-2 mb-0"><BarChart3 className="w-4 h-4 text-accent" />Applications by Domain</h3>
+  <button onClick={() => window.dispatchEvent(new CustomEvent('custom-ask-ai', { detail: `Please explain the Applications by Domain data and its implications for my role.` }))} className="flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider text-accent bg-accent/10 px-2 py-1 rounded-md hover:bg-accent hover:text-white transition-colors shrink-0">
     <Sparkles className="w-3 h-3" /> Ask AI
   </button>
-</div><ReactECharts option={charts.landscapeBubble} style={{ height: '300px' }} /><Insight text="Bubble size represents user count. The largest legacy applications cluster around high latency sources." /></div>
+</div><ReactECharts option={charts.domainBar} style={{ height: '300px' }} /><Insight text="The Finance domain currently has the largest number of applications in the portfolio." /></div>
                       </div>
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div className="bg-surface border border-border rounded-2xl p-5 shadow-sm"><div className="flex justify-between items-start mb-4">
@@ -667,11 +667,11 @@ export default function Dashboard() {
   </button>
 </div><ReactECharts option={charts.projectRiskPie} style={{ height: '280px' }} /><Insight text={`${db.projects.filter(p => p.riskLevel === 'High').length} high-risk projects. All are infrastructure migrations impacting core systems.`} /></div>
                         <div className="bg-surface border border-border rounded-2xl p-5 shadow-sm"><div className="flex justify-between items-start mb-4">
-  <h3 className="text-sm font-bold flex items-center gap-2 mb-0"><Network className="w-4 h-4 text-accent" />Application Landscape Map</h3>
-  <button onClick={() => window.dispatchEvent(new CustomEvent('custom-ask-ai', { detail: `Please explain the Application Landscape Map data and its implications for my role.` }))} className="flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider text-accent bg-accent/10 px-2 py-1 rounded-md hover:bg-accent hover:text-white transition-colors shrink-0">
+  <h3 className="text-sm font-bold flex items-center gap-2 mb-0"><BarChart3 className="w-4 h-4 text-accent" />Applications by Domain</h3>
+  <button onClick={() => window.dispatchEvent(new CustomEvent('custom-ask-ai', { detail: `Please explain the Applications by Domain data and its implications for my role.` }))} className="flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider text-accent bg-accent/10 px-2 py-1 rounded-md hover:bg-accent hover:text-white transition-colors shrink-0">
     <Sparkles className="w-3 h-3" /> Ask AI
   </button>
-</div><ReactECharts option={charts.landscapeBubble} style={{ height: '280px' }} /></div>
+</div><ReactECharts option={charts.domainBar} style={{ height: '280px' }} /></div>
                       </div>
                     </>
                   )}
